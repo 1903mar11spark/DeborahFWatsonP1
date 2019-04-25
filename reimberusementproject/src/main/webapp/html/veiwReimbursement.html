@@ -12,7 +12,7 @@
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
 
-<title>Create a New Reimbursement</title>
+<title>View Reimbursement Status</title>
 <style>
 body {
 	font-family: Marvel;
@@ -38,48 +38,30 @@ table, tr, th {
 </head>
 <body>
 	<!--<nav bar here>-->
-	<h1></h1>
+	<h1>Reimbursement</h1>
 	<div class="container">
 		<h1>Expense Reimbursement Detail</h1>
 		<button>Back</button>
-		<!--back to view table of passed expense reimbursement-->
-		<form name="createReimbursement" id="file" method="post" action="createreimbursement">
-			<div class="row">
-				<table>
-					<tr>
-						<td id="Expenspe Reimbursement ID"></td>
-						<td id="Date Submitted">Date of expense<input type="date" name="date submmited" ></td>
-						<!-- auto generate, js -->
-					</tr>
-					<tr>
-						<td id="dropdown">Type<select>
-								<option value="type">Travel</option>
-								<option value="type">Relocation</option>
-								<option value="type">Education</option>
-								<option value="type">Lunch Meeting</option>
-						</select>
-						</td>
-					</tr>
-					<tr>
-						<td id="Time Review">Date Review:</td>
-						<!-- auto generate, js -->
-					</tr>
-					<tr>
-						<td id="status"></td>
-					</tr>
-					<tr>
-						<td id="amount">Amount<input type="number" name="amount" class="form-control" placeholder="Amount" step="0.01"></td>
-					</tr>
-
-				</table>
-			</div>
-			<div class="form-group" id="file">
-				<label for="exampleFormControlFile1">file input</label> <input
-					type="file" class="form-control-file" id="exampleFormControlFile1">
-			</div>
-			<input type="submit" name="createreimbursement" value="submited">
-		</form>
+		<table>
+			<tbody>
+				<tr>
+					<td id="expenspeId"></td>
+					<td id="empId"></td>
+					<td id="managerId"></td>
+				</tr>
+				<tr>
+					<td id="type"></td>
+					<td id="status"></td>
+					<td id="amount"></td>
+				</tr>
+				<tr>
+					<td id="file"></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+		
+		
 </body>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -95,10 +77,5 @@ table, tr, th {
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
 	
-<script>
-
-
-
-document.getElementById("Date Submitted").valuevalueAsDate=new Date();
-</script>
+<script src="scripts/viewReim.js"></script>
 </html>

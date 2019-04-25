@@ -37,7 +37,7 @@ public class SessionServlet extends HttpServlet {
 
 		HttpSession session = request.getSession(false);
 		
-		System.out.println(session);
+
 		  if (session != null ) { 
 			  try { 
 				  int empId = Integer.parseInt(session.getAttribute("empId").toString());
@@ -61,7 +61,6 @@ public class SessionServlet extends HttpServlet {
 				  
 				  String employeeJSON = om.writeValueAsString(e);
 				  response.getWriter().write(employeeJSON);
-				  System.out.println(employeeJSON);
 				  request.getRequestDispatcher(employeeJSON);
 				  
 			} catch (Exception e) {
